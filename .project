@@ -1,0 +1,14 @@
+<projectDescription>
+  <name>ditaa-confluence-plugin</name>
+  <comment>Parent POM for Confluence plugins. Specifies which version of Java to compile
+        against, and Maven repositories for Confluence and its dependencies.</comment>
+  <projects/>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

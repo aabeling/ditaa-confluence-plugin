@@ -1,0 +1,26 @@
+<atlassian-plugin key="${atlassian.plugin.key}"
+	name="ditaa-confluence-plugin">
+	<plugin-info>
+		<description><!-- TODO: add description -->
+		</description>
+		<version>${project.version}</version>
+		<!-- TODO: Add vendor details -->
+		<!--
+			<vendor name="Example Company" url="http://www.example.com"/>
+		-->
+	</plugin-info>
+
+	<macro name='ditaa' class='de.banapple.confluence.DitaaMacro'
+		key='ditaa'>
+		<!-- TODO: Add macro description -->
+		<!-- <description></description> -->
+	</macro>
+
+	<servlet name="Ditaa Servlet" key="ditaaServlet"
+		class="de.banapple.confluence.DitaaServlet">
+		<description>
+			Returns a png image stream representing ascii art
+		</description>
+		<url-pattern>/ditaa</url-pattern>
+	</servlet>
+</atlassian-plugin>
