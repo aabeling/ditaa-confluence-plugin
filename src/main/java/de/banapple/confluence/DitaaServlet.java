@@ -39,23 +39,14 @@ public class DitaaServlet
 			return;
 		}
 		
-		String gridCode = encodedGrid;
-//		String gridCode = codec.decode(encodedGrid);
-//		System.out.println("encodedGrid="+encodedGrid);
-//		System.out.println("gridCode="+gridCode);
+		String gridCode = codec.decode(encodedGrid);
+		System.out.println("encodedGrid="+encodedGrid);
+		System.out.println("gridCode="+gridCode);
 		
-		TextGrid grid = new TextGrid();
-		ConversionOptions options = new ConversionOptions();
-//		options.setDebug(true);
-		grid.initialiseWithText(gridCode, options.processingOptions);
-		Diagram diagram = new Diagram(grid, options);
-		RenderedImage image = 
-			new BitmapRenderer().renderToImage(
-					diagram, 
-					options.renderingOptions);
-	
+		Renderer renderer = new Renderer();
+		
 		resp.setContentType("image/png");
-		ImageIO.write(image, "png", resp.getOutputStream());
+		renderer.renderToStream(gridCode, resp.getOutputStream());
 	}
 
 }
