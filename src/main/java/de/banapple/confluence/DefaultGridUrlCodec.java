@@ -1,6 +1,5 @@
 package de.banapple.confluence;
 
-import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 
@@ -11,20 +10,12 @@ public class DefaultGridUrlCodec implements GridUrlCodec
 	
 	public String decode(String text)
 	{
-//		try {
-			return URLDecoder.decode(text);
-//		} catch (UnsupportedEncodingException e) {
-//			throw new RuntimeException(e);
-//		}
+		return text;
 	}
 
 	public String encode(String text)
 	{
-//		try {
-			return URLEncoder.encode(text);
-//		} catch (UnsupportedEncodingException e) {
-//			throw new RuntimeException(e);
-//		}
+		return URLEncoder.encode(text);
 	}
 
 }
