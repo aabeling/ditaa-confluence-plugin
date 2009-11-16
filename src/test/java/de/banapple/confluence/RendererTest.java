@@ -33,4 +33,16 @@ public class RendererTest
 		
 		Assert.assertTrue(stream.size()>0);
 	}
+	
+	public void testFailing() throws IOException 
+	{
+		String gridCode = 
+			"///\\\\/\\//\\"+
+			"|\\/\\\\/|\\/|";
+		Renderer renderer = new Renderer();
+		ByteArrayOutputStream stream = new ByteArrayOutputStream();
+		
+		renderer.renderToStream(gridCode, stream);
+	
+	}
 }
