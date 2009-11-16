@@ -29,6 +29,6 @@ public class GridUrlCodecTest
 		System.out.println(compressedText);
 		String decoded = codec.decode(compressedText);
 		System.out.println(decoded);
-		Assert.assertEquals(text, decoded);
+		Assert.assertEquals(compressedText, decoded);
 	}
 }
