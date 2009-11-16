@@ -1,19 +1,23 @@
 <atlassian-plugin key="${atlassian.plugin.key}"
 	name="ditaa-confluence-plugin">
 	<plugin-info>
-		<description><!-- TODO: add description -->
+		<description>
+			Provides a macro which creates png images
+	  		from ascii art using the ditaa library
+	  		(http://ditaa.sourceforge.net/).
 		</description>
 		<version>${project.version}</version>
-		<!-- TODO: Add vendor details -->
-		<!--
-			<vendor name="Example Company" url="http://www.example.com"/>
-		-->
+		<vendor name="www.banapple.de" url="http://www.banapple.de"/>
 	</plugin-info>
 
 	<macro name='ditaa' class='de.banapple.confluence.DitaaMacro'
 		key='ditaa'>
-		<!-- TODO: Add macro description -->
-		<!-- <description></description> -->
+		<description>
+		The body of the macro is interpreted as ascii art
+		and rendered into a png image. See
+		http://ditaa.sourceforge.net/ for details about what
+		is possible.
+		</description>
 	</macro>
 
 	<servlet name="Ditaa Servlet" key="ditaaServlet"
